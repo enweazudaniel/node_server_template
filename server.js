@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 
@@ -12,7 +13,6 @@ app.get("/about", function(req,res){
   res.send("<h1>I am Daniel</h1>");
 });
 
-app.listen(3000, function()
-{console.log("server started on port 3000");
-
+app.listen(process.env.PORT || 3000, function(){
+  console.log("You are now live");
 });
